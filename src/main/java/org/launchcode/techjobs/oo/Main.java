@@ -17,6 +17,18 @@ public class Main {
 //        for (Job job : jobs){
 //            System.out.println(job);
 //        }
+        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String string = "\n" +
+                "ID: " + job.getId() + "\n" +
+                "Name: " + job.getName() + "\n" +
+                "Employer: " + job.getEmployer() + "\n" +
+                "Location: " + job.getLocation() + "\n" +
+                "Position Type: " + job.getPositionType() + "\n" +
+                "Core Competency: " + job.getCoreCompetency() + "\n" +
+                "\n";
+        System.out.println(string.charAt(118));
     }
+
 
 }
