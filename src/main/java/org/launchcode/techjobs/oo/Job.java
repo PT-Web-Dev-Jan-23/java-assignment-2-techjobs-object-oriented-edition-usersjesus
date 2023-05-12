@@ -34,15 +34,32 @@ public class Job {
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
-    public String toString(Job job) {
-        return "\n" +
-                "ID: " + job.getId() + "\n" +
-                "Name: " + job.getName() + "\n" +
-                "Employer: " + job.getEmployer() + "\n" +
-                "Location: " + job.getLocation() + "\n" +
-                "Position Type: " + job.getPositionType() + "\n" +
-                "Core Competency: " + job.getCoreCompetency() + "\n" +
-                "\n";
+    @Override
+    public String toString() {
+        String output = "";
+        if (name.equals("")) {
+            name = "Data not available";
+        }
+        if (employer.getValue().equals("") || employer.getValue() == null) {
+            employer.setValue("Data not available");
+        }
+        if (location.getValue().equals("") || location.getValue() == null) {
+            location.setValue("Data not available");
+        }
+        if (positionType.getValue().equals("") || positionType.getValue() == null) {
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.getValue().equals("") || coreCompetency.getValue() == null) {
+            coreCompetency.setValue("Data not available");
+        }
+        output = "\n" +
+                "ID: " + id + "\n" +
+                "Name: " + name + "\n" +
+                "Employer: " + employer + "\n" +
+                "Location: " + location + "\n" +
+                "Position Type: " + positionType + "\n" +
+                "Core Competency: " + coreCompetency + "\n";
+        return output;
     }
 
     @Override

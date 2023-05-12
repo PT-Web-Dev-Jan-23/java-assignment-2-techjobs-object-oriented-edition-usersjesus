@@ -13,6 +13,7 @@ public abstract class JobField {
     }
 
     public JobField(String value) {
+        this();
         this.value = value;
     }
 
